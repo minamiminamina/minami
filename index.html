@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Double Chance Prize</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background: black;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background: gold;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 40px;
+      font-size: 24px;
+      display: none;
+    }
+
+    #book {
+      display: none;
+      margin-top: 40px;
+    }
+
+    img {
+      width: 250px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+  <h2>Double Chance Prize</h2>
+
+  <button onclick="draw()">抽選する</button>
+
+  <div id="result">
+    <p>🎊 当選おめでとうございます！ 🎊</p>
+    <p>ダブルチャンス賞 獲得！</p>
+
+    <button onclick="openBook()">フォトブックを見る</button>
+  </div>
+
+  <div id="book">
+    <h2>Memories with You</h2>
+
+    <p>ここから2人の思い出</p>
+
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+
+    <p>これからもたくさん思い出作ろうね。</p>
+
+  </div>
+
+  <script>
+
+    function draw() {
+      setTimeout(function () {
+        document.getElementById("result").style.display = "block";
+      }, 2000);
+    }
+
+    function openBook() {
+      document.getElementById("book").style.display = "block";
+    }
+
+  </script>
+
+</body>
+
+</html>
